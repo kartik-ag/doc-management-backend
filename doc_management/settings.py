@@ -130,7 +130,7 @@ SIMPLE_JWT = {
 }
 
 # CORS settings
-CORS_ALLOWED_ORIGINS = os.environ.get('CORS_ALLOWED_ORIGINS', 'http://localhost:3000,https://doc-management-frontend.vercel.app').split(',')
+CORS_ALLOWED_ORIGINS = os.environ.get('CORS_ALLOWED_ORIGINS', 'https://doc-management-frontend.vercel.app').split(',')
 CORS_ALLOW_CREDENTIALS = True
 
 # Security settings
