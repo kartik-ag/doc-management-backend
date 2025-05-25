@@ -14,7 +14,7 @@ services:
       - key: DEBUG
         value: false
       - key: ALLOWED_HOSTS
-        value: ".onrender.com"
+        value: "doc-management-backend.onrender.com"
       - key: PORT
         value: 10000
     healthCheckPath: /api/token/
