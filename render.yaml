@@ -3,7 +3,7 @@ services:
     name: doc-management-backend
     env: python
     buildCommand: "./build.sh"
-    startCommand: "gunicorn doc_management.wsgi:application"
+    startCommand: "gunicorn doc_management.wsgi:application --bind 0.0.0.0:$PORT"
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.0
@@ -14,4 +14,8 @@ services:
       - key: DEBUG
         value: false
       - key: ALLOWED_HOSTS
-        value: ".onrender.com" 
+        value: ".onrender.com"
+      - key: PORT
+        value: 10000
+    healthCheckPath: /api/token/
+    autoDeploy: true 

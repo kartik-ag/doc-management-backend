@@ -18,4 +18,9 @@ if not User.objects.filter(username='admin').exists():
 END
 
 # Collect static files
-python manage.py collectstatic --no-input 
+python manage.py collectstatic --no-input
+
+# Make sure the port is set
+if [ -z "$PORT" ]; then
+    export PORT=10000
+fi 
